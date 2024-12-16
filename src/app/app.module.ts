@@ -3,7 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { DiagramModule, SymbolPaletteModule } from '@syncfusion/ej2-angular-diagrams';
+// Syncfusion'un kullandığınız bileşen modülleri
+import { DiagramModule, SymbolPaletteModule, BpmnDiagrams } from '@syncfusion/ej2-angular-diagrams';
+import { ToolbarModule } from '@syncfusion/ej2-angular-navigations';
+import { SplitButtonModule } from '@syncfusion/ej2-angular-splitbuttons';
+import { UploaderModule } from '@syncfusion/ej2-angular-inputs';
 
 
 @NgModule({
@@ -13,9 +17,15 @@ import { DiagramModule, SymbolPaletteModule } from '@syncfusion/ej2-angular-diag
   imports: [
     BrowserModule,
     DiagramModule,
-    SymbolPaletteModule
+    SymbolPaletteModule,
+    DiagramModule,
+    SymbolPaletteModule,
+    ToolbarModule,
+    SplitButtonModule,
+    UploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent ]
 })
+
 export class AppModule { }
